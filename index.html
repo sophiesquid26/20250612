@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Professional Website</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophie's Personal Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-primary font-bold text-xl font-playfair">Sophie</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">About Me</a>
+                <a href="#hobbies" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Hobbies</a>
+                <a href="#certificates" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Certificates</a>
+                <a href="#skills" class="text-primary hover:text-secondary transition-colors duration-300 font-medium">Skills</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-primary focus:outline-none">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#about" class="text-primary hover:text-secondary transition-colors duration-300 font-medium py-2">About Me</a>
+                <a href="#hobbies" class="text-primary hover:text-secondary transition-colors duration-300 font-medium py-2">Hobbies</a>
+                <a href="#certificates" class="text-primary hover:text-secondary transition-colors duration-300 font-medium py-2">Certificates</a>
+                <a href="#skills" class="text-primary hover:text-secondary transition-colors duration-300 font-medium py-2">Skills</a>
+                <a href="#contact" class="text-primary hover:text-secondary transition-colors duration-300 font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://imgur.com/nHYRGBO.jpg" class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/70 to-accent/70 z-10"></div>
+        <div class="container mx-auto px-4 relative z-20 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-white text-shadow mb-4 leading-tight font-playfair">
+                    Sophie
+                </h1>
+                <p class="text-[clamp(1.2rem,3vw,1.8rem)] text-white text-shadow mb-8">
+                    A 17-year-old student from Macau
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#about" class="bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        About Me
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white font-medium py-3 px-8 rounded-full transition-all duration-300 hover:bg-white/10">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#about" class="text-white text-3xl">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,2.5rem)] font-bold text-primary mb-4 font-playfair">About Me</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02]">
+                        <img src="https://imgur.com/YzRpdKP.jpg" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-4 rounded-lg shadow-lg">
+                        <p class="font-bold text-xl">17</p>
+                        <p class="text-sm">Years Old</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-playfair">Hello, I'm Sophie</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A 17-year-old student from Macau, currently navigating grade 11 at Colégio Diocesano de São José the Fifth School. 
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Passionate about photography, I recently joined my school’s photography team, capturing moments that tell stories. With skills in coding, design, and software technology, I enjoy blending creativity with analytical thinking.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fa fa-graduation-cap text-secondary mr-3 text-xl"></i>
+                            <div>
+                                <p class="text-sm text-gray-500">Current School</p>
+                                <p class="font-medium">Colégio Diocesano de São José</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-map-marker text-secondary mr-3 text-xl"></i>
+                            <div>
+                                <p class="text-sm text-gray-500">Location</p>
+                                <p class="font-medium">Macau, China</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,2.5rem)] font-bold text-primary mb-4 font-playfair">Hobbies & Interests</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://imgur.com/1xizHkH.jpg" alt="Photography" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-camera text-secondary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">Photography</h3>
+                        <p class="text-gray-600">Joined the school’s photography team since grade 11, capturing moments and stories through my lens.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://imgur.com/iYeEFYM.jpg" alt="Psychology" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-book text-secondary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">Psychology</h3>
+                        <p class="text-gray-600">Fascinated by the human mind, I enjoy reading books about psychology to understand people better.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://imgur.com/wOqipGJ.jpg" alt="Engineering" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-cogs text-secondary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">Engineering</h3>
+                        <p class="text-gray-600">Specifically interested in motorsports and nuclear engineering, exploring the intersection of technology and innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates & Awards Section with Slider -->
+    <section id="certificates" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,2.5rem)] font-bold text-primary mb-4 font-playfair">Certificates & Awards</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <!-- Certificate Categories Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="cert-tabs">
+                <button class="cert-tab active px-6 py-2 rounded-full bg-secondary text-white font-medium transition-all duration-300" data-category="volunteer">
+                    <i class="fa fa-handshake-o mr-2"></i>Volunteer Work
+                </button>
+                <button class="cert-tab px-6 py-2 rounded-full bg-gray-200 text-primary font-medium transition-all duration-300" data-category="offcampus">
+                    <i class="fa fa-trophy mr-2"></i>Off-campus Competitions
+                </button>
+                <button class="cert-tab px-6 py-2 rounded-full bg-gray-200 text-primary font-medium transition-all duration-300" data-category="incampus">
+                    <i class="fa fa-certificate mr-2"></i>In-school Competitions
+                </button>
+                <button class="cert-tab px-6 py-2 rounded-full bg-gray-200 text-primary font-medium transition-all duration-300" data-category="exams">
+                    <i class="fa fa-book mr-2"></i>Public Exams
+                </button>
+            </div>
+            
+            <!-- Certificate Sliders -->
+            <div class="cert-slider-container">
+                <!-- Volunteer Work Slider -->
+                <div class="cert-slider active" id="volunteer-slider">
+                    <div class="relative">
+                        <button class="slider-control prev absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        
+                        <button class="slider-control next absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="slider-track flex overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+                            <!-- Volunteer Work Certificates -->
+                            <div class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] p-4 snap-center">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-100 certificate-card">
+                                    <div class="h-60 overflow-hidden">
+                                        <img src="https://imgur.com/JRVav0s.jpg">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">Winter Warming 2023</h3>
+                                        <p class="text-gray-500 mb-4">Held by UGAMM</p>
+                                        <p class="text-gray-600">Participated in the winter warming event organized by the University of Macau Students' Union, helping distribute warm clothing and supplies to those in need during the cold season.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] p-4 snap-center">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-100 certificate-card">
+                                    <div class="h-60 overflow-hidden">
+                                        <img src="https://imgur.com/OZRZxAV.jpg">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">Fuhong Society of Macau 20th anniversary</h3>
+                                        <p class="text-gray-500 mb-4">Flag-selling charity event</p>
+                                        <p class="text-gray-600">Contributed to the 20th anniversary flag-selling charity event organized by the Fuhong Society of Macau, raising funds to support children with special needs and their families.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Add more volunteer certificates if needed -->
+                        </div>
+                        
+                        <!-- Slider Dots -->
+                        <div class="flex justify-center mt-8 space-x-2">
+                            <button class="slider-dot active w-3 h-3 rounded-full bg-secondary focus:outline-none" data-index="0"></button>
+                            <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="1"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Off-campus Competitions Slider -->
+                <div class="cert-slider hidden" id="offcampus-slider">
+                    <div class="relative">
+                        <button class="slider-control prev absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        
+                        <button class="slider-control next absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="slider-track flex overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+                            <!-- Off-campus Competitions Certificates -->
+                            <div class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] p-4 snap-center">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-100 certificate-card">
+                                    <div class="h-60 overflow-hidden">
+                                        <img src="https://imgur.com/v58UaWm.jpg">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">Global Youth Challenge 2025</h3>
+                                        <p class="text-gray-500 mb-4">Essay and Speech Competition (Senior Division) - Top 25% Distinction</p>
+                                        <p class="text-gray-600">Achieved top 25% distinction in the essay and speech competition, addressing global challenges and proposing innovative solutions to promote sustainable development and social responsibility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] p-4 snap-center">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-100 certificate-card">
+                                    <div class="h-60 overflow-hidden">
+                                        <img src="https://imgur.com/sY80FxE.jpg">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">2025 ROBOFEST Macau</h3>
+                                        <p class="text-gray-500 mb-4">Bottle Sumo Senior Classic Gold Award</p>
+                                        <p class="text-gray-600">Won the Gold Award in the Bottle Sumo Senior Classic category at the ROBOFEST Macau competition, demonstrating technical skills and creativity in designing and programming autonomous robots.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] p-4 snap-center">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-100 certificate-card">
+                                    <div class="h-60 overflow-hidden">
+                                        <img src="https://imgur.com/XF6CqLW.jpg">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">2024/2025 學年校園記者計劃</h3>
+                                        <p class="text-gray-500 mb-4">優異奬</p>
+                                        <p class="text-gray-600">Received the Excellence Award in the Campus Journalist Program, recognizing outstanding writing and reporting skills in covering school events and student stories.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slider Dots -->
+                        <div class="flex justify-center mt-8 space-x-2">
+                            <button class="slider-dot active w-3 h-3 rounded-full bg-secondary focus:outline-none" data-index="0"></button>
+                            <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="1"></button>
+                            <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="2"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- In-school Competitions Slider -->
+                <div class="cert-slider hidden" id="incampus-slider">
+                    <div class="relative">
+                        <button class="slider-control prev absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        
+                        <button class="slider-control next absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="slider-track flex overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+                            <!-- In-school Competitions Certificates -->
+                            <div class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] p-4 snap-center">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-100 certificate-card">
+                                    <div class="h-60 overflow-hidden">
+                                        <img src="https://imgur.com/o2UoVJE.jpg">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">圖書館攝影比賽「文鏡相映」</h3>
+                                        <p class="text-gray-500 mb-4">金鏡獎第一名</p>
+                                        <p class="text-gray-600">Won the first place in the Golden Mirror Award category at the library photography competition "Literature and Mirror Echoing," showcasing creative photography skills and artistic vision.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Add more in-school certificates if needed -->
+                        </div>
+                        
+                        <!-- Slider Dots -->
+                        <div class="flex justify-center mt-8 space-x-2">
+                            <button class="slider-dot active w-3 h-3 rounded-full bg-secondary focus:outline-none" data-index="0"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Public Exams Slider -->
+                <div class="cert-slider hidden" id="exams-slider">
+                    <div class="relative">
+                        <button class="slider-control prev absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        
+                        <button class="slider-control next absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-4 md:translate-x-0 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg focus:outline-none transition-all duration-300 hover:bg-secondary hover:text-white">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="slider-track flex overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+                            <!-- Public Exams Certificates -->
+                            <div class="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.33rem)] p-4 snap-center">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-gray-100 certificate-card">
+                                    <div class="h-60 overflow-hidden">
+                                        <img src="https://imgur.com/s5BCOfh.jpg" alt="IGCSE Maths" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-primary mb-3 font-playfair">IGCSE Maths</h3>
+                                        <p class="text-gray-500 mb-4">Band 8 (2024)</p>
+                                        <p class="text-gray-600">Achieved Band 8 in the IGCSE Mathematics exam, demonstrating strong mathematical skills and problem-solving abilities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Add more exam certificates if needed -->
+                        </div>
+                        
+                        <!-- Slider Dots -->
+                        <div class="flex justify-center mt-8 space-x-2">
+                            <button class="slider-dot active w-3 h-3 rounded-full bg-secondary focus:outline-none" data-index="0"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,2.5rem)] font-bold text-primary mb-4 font-playfair">Skills & Languages</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-primary mb-6 font-playfair">Technical Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Basic Softwares</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="70%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Microsoft Word, PowerPoint, Excel, etc.</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Basic Coding</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="70%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Python, C++, HTML, CSS</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">2D Design</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="80%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Figma, Canva</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Photography</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="80%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Composition, Lighting, Editing</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Video Editing</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="80%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Premiere Pro, Final Cut Pro</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">3D Modelling</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="75%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">SketchUp, Blender, Tinkercad</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Hardware Technology</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="70%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Arduino, Micro:bit</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-primary mb-6 font-playfair">Languages</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Chinese (Cantonese)</span>
+                                <span>Native</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="100%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">English</span>
+                                <span>Fluent</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Mandarin</span>
+                                <span>Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 0%" data-width="65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,2.5rem)] font-bold mb-4 font-playfair">Get In Touch</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 font-playfair">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                <i class="fa fa-envelope text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg">Email</h4>
+                                <p class="text-gray-300">sophiesquid26@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                <i class="fa fa-phone text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg">Phone</h4>
+                                <p class="text-gray-300">+853 6313 8266</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                <i class="fa fa-map-marker text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg">Location</h4>
+                                <p class="text-gray-300">Macau, China</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h4 class="font-medium text-lg mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-secondary/20 hover:bg-secondary/40 p-3 rounded-full transition-all duration-300">
+                                <i class="fa fa-instagram text-secondary text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-secondary/20 hover:bg-secondary/40 p-3 rounded-full transition-all duration-300">
+                                <i class="fa fa-linkedin text-secondary text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-secondary/20 hover:bg-secondary/40 p-3 rounded-full transition-all duration-300">
+                                <i class="fa fa-twitter text-secondary text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 font-playfair">Send Me a Message</h3>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-playfair">Sophie</h3>
+                    <p class="text-gray-300">A 17-year-old student from Macau with a passion for photography, psychology, and engineering.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-playfair">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-secondary transition-colors duration-300">About</a></li>
+                        <li><a href="#hobbies" class="text-gray-300 hover:text-secondary transition-colors duration-300">Hobbies</a></li>
+                        <li><a href="#certificates" class="text-gray-300 hover:text-secondary transition-colors duration-300">Certificates</a></li>
+                        <li><a href="#skills" class="text-gray-300 hover:text-secondary transition-colors duration-300">Skills</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-playfair">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to get updates on my latest projects and achievements.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-secondary hover:bg-secondary/90 text-white px-4 py-2 rounded-r-lg transition-colors duration-300">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 Sophie's Personal Profile. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

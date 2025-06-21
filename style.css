@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .content-auto {
+        content-visibility: auto;
+    }
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .bg-blur {
+        -webkit-backdrop-filter: blur(8px);
+                backdrop-filter: blur(8px);
+    }
+    .certificate-shadow {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .skill-bar {
+        height: 6px;
+        border-radius: 3px;
+        background-color: #e2e8f0;
+    }
+    .skill-progress {
+        height: 6px;
+        border-radius: 3px;
+        background-color: #D5BDA8;
+        transition: width 1.5s ease-in-out;
+    }
+    .certificate-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .certificate-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .certificate-thumbnail {
+        height: 120px;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+    .certificate-subtopic {
+        transition: all 0.3s ease;
+    }
+    .certificate-subtopic:hover {
+        transform: scale(1.03);
+    }
+    .slider-dot {
+        transition: all 0.3s ease;
+    }
+    .slider-dot.active {
+        width: 12px;
+        background-color: #D5BDA8;
+    }
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #BDA28A;
+    color: #1f2937;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D5BDA8;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ad947f;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#contact, footer {
+  background-color: #ad947f;
+}
